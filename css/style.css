@@ -1,0 +1,359 @@
+* { -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; }
+
+
+html, body {                         /* styling to main body of html */
+ background:#fff;                    /* set background color of entire page white. */
+ color:#333;                         /* set color of text #333; */
+ font:13px Helvetica, sans-serif;    /* set default font size to 13px, and default font family to Helvetica , sans-serif. */
+ overflow-x:hidden;                  /* The content is clipped - and no scrolling mechanism is provided */
+ line-height:1.8;                    /* use to specify the line height.*/
+ } 
+  
+p { margin:0 0 18px; }               /* Set top margin is 0px, right and left margins are 0px, bottom margin is 18px for paragraph of body */
+
+a { 
+cursor:pointer;                      /* set pointer when cursor goes over any link of body */
+text-decoration:underline;           /* set links underlined ( HOME SUMMER COLLECTION SIGN UP STORES are underlined when cursor moves over it) */
+color:#333; }                        /* set color of text #333; */
+a:hover { color:#666; }              /* by moving cursor on link text color chage to #666 */
+
+img { max-width:100%; }              /* width property for image is set to 100%, the image will be responsive and scale up and down */
+
+table { margin:0 auto;               /* for table set margin property to auto to horizontally center the element within its container. */
+padding:0;                           /* set padding to its default value */
+border-spacing:0; }                  /*  the border-spacing property sets the distance between the borders of adjacent cells (here it is set to default) */
+
+table tr td {                        /* styling table record and table data */
+padding:0 0 10px 0;                  /*  set top padding is 0px, right padding is 0px, bottom padding is 10px left padding is 0px */
+vertical-align:top;                  /*  sets the vertical alignment of an element to top. */
+}
+
+input, textarea, select {            /* stying form field for name and email */
+background:#fff;                     /* set background color white */
+border:1px solid #CCCCCC;            /*set border style: 1 px wide, solid color:#cccccc */
+padding:8px;                         /* set all four padding to 8px */
+margin:0;                            /* set margin to its default value */
+color:#666;                          /* set color of text #666 */
+width:95%;                           /* set form box 95% wide */
+height:40px;                         /* set form box of 40px height */
+font-size:13px; }                    /* set size of text 13px. */
+
+select  { width:100%; }              /* width property for select is set to 100%, the image will be responsive and scale up and down */
+input:focus, textarea:focus, select:focus { /* by focus border color changes to  #333 */
+border-color:#333; 
+} 
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder, select:focus::-webkit-input-placeholder { color:#333; } /* for WebKit browsers */
+input:focus:-moz-placeholder, textarea:focus:-moz-placeholder, select:focus:-moz-placeholder { color:#333; } /* for Mozilla Firefox 4 to 18 */
+input:focus::-moz-placeholder, textarea:focus::-moz-placeholder, select:focus::-moz-placeholder { color:#333; } /* for Mozilla Firefox 19+ */
+input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder, select:focus:-ms-input-placeholder { color:#333; } /* for Internet Explorer 10+ */
+::-webkit-input-placeholder {         /* WebKit browsers */
+    color:    #666;
+}
+:-moz-placeholder {                   /* Mozilla Firefox 4 to 18 */
+    color:    #666;
+    opacity:  1;
+}
+::-moz-placeholder {                  /* Mozilla Firefox 19+ */
+    color:    #666;
+    opacity:  1;
+}
+:-ms-input-placeholder {               /* Internet Explorer 10+ */
+    color:    #666;
+}
+input[type=image] {                    /* input type="image" sends the X and Y coordinates of the click that activated the submit button. */ 
+background:transparent;                /* set background transparent */
+border:none !important;                /* set no border around submti button */
+padding:0;                             /* set padding to its default value */
+margin:0;                              /* set margin to its default value */
+width:auto;                            /* set width to auto */
+}
+label.error  {                         /* styling text inside error box ( when email and password both are not filled or not filled correctly error box appears here is styling of that box */
+text-align:left !important;            /* starting text from left */
+display:block;                         /* showing a block */
+color:red; }                           /* set text color red */
+input.error, textarea.error, select.error { /*styling error box */
+ border-color:red;                     /* set red color of error box border */
+ }                     
+
+#container {                           /* styling division container */
+background:#fff;                       /* set background color white */
+margin:0 auto;                         /* set margin to its default value */
+padding:0 0 80px;                      /* set top padding 0px, left and right 0px, bottom 80 px */
+z-index:2;                             /* The z-index property specifies the stack order of an element, here z-index is set to 2 */
+position:relative; }                   /* The element is positioned relative to its normal position */
+#header_height { height:60px; }        /* set the height of header */
+
+#menu {                                /* styling menu division */
+text-align:center;                     /* showing menu items at center */
+width:960px;                           /* set menu width 960 px */ 
+margin:0 auto;                         /* set margin to its default value */
+padding:0;                             /* set all four padding to 0 */
+}             
+#menu ul {                             /* styling unordered list in menu */
+list-style:none;                       /* bullets or numbering is not used before menu item */
+margin:0;                              /* set margin to its default value */
+padding:0; }                           /* set margin to its default value */
+
+#menu ul li { display:inline-block; padding:0 80px; border-right:2px solid #999; } /* styling list items  of menu */
+#menu ul li a { display:inline-block; border-bottom:3px solid #fff; color:#333; text-decoration:none; } /* styling text of menu */
+#menu ul li a:hover { border-color:#999; color:#999; } /* set style when mouse over on menu items */
+#menu ul li:first-child { padding-left:0; }            /* set padding on left side of first menu item (HOME) */
+#menu ul li:last-child { padding-right:0; border:none; }  /* set padding on right side of last menu item (STORES) */
+
+#logo { text-align:center; margin:0; padding:64px 0 0; }  /* styling division logo */
+
+#logo_fixed {                              /*styling top header */
+background:url(../images/wood.jpg) #000;   /* set background image for header and background color to black */ 
+text-align:center;                         /* set text positon to center*/
+position:fixed;                            /* set header fixed it will not moved around whole page */
+top:0;                                     /* header is fixed at top */
+left:0;                                    /* header starts from left */
+right:0;                                   /* header ends at right */
+z-index:100;                               /* to overlap header */
+width:100%;                                /* width of header is set to device width */
+height:34px;                               /* set header height 34px */
+padding:3px 0;                             /* set padding for header */
+box-shadow:0 3px 3px #666; }               /* set box shadow and color */
+#logo_fixed img { height:100%; }           /* set height of image of header to 100% so its responsive according to device */
+#home { text-align:center; width:960px; margin:0 auto; padding:48px 0; } /* styling division home */
+#home iframe { width:100%; }               /* set width of youtube video window */
+#home p { margin:24px 0; }                 /* styling paragraph in divisin home */
+#product { text-align:center; width:960px; margin:0 auto; padding:48px 0; text-transform:uppercase; line-height:1.5; } /* styling division product */
+#product h2 { font-size:40px; margin:0; text-transform:uppercase; } /* set style of heading in product divison */
+#product p { margin:0; text-transform:uppercase; }                  /* set style of paragraph in product divison */
+#product .item { float:left; width:320px; padding:20px 20px 40px; } /* styling item class of product division */
+#product .item .image { display:table-cell; width:280px; height:303px; vertical-align:bottom; text-align:center; overflow:hidden; } /* styling images in product division */
+#product .item .image img { max-height:100%; }        /*set height of images */
+#product .item .name { padding:10px 0; }              /*set padding of  text ( name of items)*/ 
+#product .item .name strong { display:block; margin:0 0 4px; } /* first name of product item is bold and set its position */
+#product .item .name span { display:block; }                   /* styling span */
+#email_box { background:url(../images/cloud.jpg) #fff; text-align:center; padding:30px 20px 24px 20px; background-size: cover; } /* set and style background image and text for sign up */
+#email_box > div{ width:960px; margin:0 auto; }  /* set width and margin for email_box  */
+#email_box a { text-decoration:none; color:#333; }  /*  set style of links */
+#email_box a:hover { text-decoration:none; color:#333; } /* set style when hover on links */
+#email_box h2 { font-size:40px; margin:0; text-transform:uppercase; } /* set style of heading two */
+#email_box p { margin:0; text-transform:uppercase; }                 /* set style of paragraph */
+#store_box { width:960px; margin:0 auto; padding:0 0 24px; }         /* styling division store_box */
+#store_box h2 { font-size:40px; text-align:center; text-transform:uppercase; } /* styling heading */
+#store_box .store { float:left; width:50%; }                         /* styling class store of division store_box */
+#store_box .store > div { padding:25px 50px; }                       /* set padding */
+#store_box .store_first > div { border-right:1px solid #ccc; padding:25px 50px; } /* styling class store_first */
+#store_box .store .address { background:url(../images/location-icon.png) no-repeat left center; padding:0 0 0 34px; margin:0 0 18px; line-height:30px;  text-decoration:none; color:#333; border-botton:1px dotted #ccc; display:block; } /* styling location image and text */ 
+#store_box .store .address:hover { text-decoration:none; color:#333; border-botton:1px dotted #666; } /* set style of text when cusrsor hover */
+.address_div { background:#fff; position:absolute; top:50%; left:50%; margin:-300px 0 0 -300px; width:600px; height:600px; padding:40px; box-shadow:1px 1px 5px #999; z-index:1; } /* set style for address division */
+.address_div p { line-height:20px; } /* set line height for paragraph */
+.address_div .close { position:absolute; top:10px; right:10px; z-index:10; cursor:pointer; text-align:center; font-size:18px; text-decoration:none; color:#999; } /* set style of class close */
+#store_box .store .tel { background:url(../images/phone-icon.png) no-repeat left center; padding:0 0 0 34px; margin:0 0 8px; line-height:26px; text-decoration:none; color:#333; border-botton:1px dotted #ccc; display:block; } /*set style of telephone image and text */
+#store_box .store .tel:hover { text-decoration:none; color:#333; border-botton:1px dotted #666; } /* set style when mouse hover */
+#footer { background:url(../images/wood.jpg) #000; position:fixed; bottom:0; left:0; right:0; padding:5px 0; font-size:11px; color:#fff; z-index:3; } /* styling footer */
+#footer > div { width:960px; margin:0 auto; }
+#footer_left { float:left; }
+#footer_right { float:right; text-align:right; line-height:40px; }
+#footer_right a { text-decoration:none; color:#fff; }
+#footer_right a:hover { text-decoration:none; color:#fff; }
+
+#denimboxes .denim { float:left; width:309px; padding:20px 20px 40px; } /* styling item class of product division */
+
+
+#popup_box {
+    display: none;
+}
+#popup_box h1 {
+    text-align: center;
+    font-weight: 700;
+}
+.oui-form-poup {
+    width: 100%;
+}
+table.oui-form-poup tr td {
+    text-align: left;
+}
+.oui-form-poup input[type="text"],
+.oui-form-poup input[type="email"] {
+    width: 100%;
+}
+
+
+
+.hide { display:none; } /* styling class hide ( it is hidden at default ) */
+.clear { clear:both; }
+.divider { background:#ccc; height:1px; margin:0; }
+
+.popup { display:none; position:fixed; top:0; left:0; right:0; bottom:0; z-index:100; } /* set style for pop up of telephone */
+.popup_bg { background:#000; opacity:.85; position:fixed; top:0; left:0; right:0; bottom:0; z-index:1; } /* set style of background behind pop up page */
+.popup_box { width:500px; height:500px; position:fixed; top:50%; left:50%; margin:-250px 0 0 -250px; background:#fff; color:#333; padding:40px 30px 30px; z-index:2; } /* styling pop up box */
+.popup_box * { color:#333; } /* set text color */
+.popup_box > div,
+.popup_box > iframe { overflow-y:scroll; height:430px; /* set scroling in height for pop up box */
+	-webkit-overflow-scrolling:touch; /* for WebKit browsers */
+	-moz-overflow-scrolling:touch;  /* for Mozilla Firefox */
+	overflow-scrolling:touch; }
+.popup_box > div * { padding:0 10px 0 0; }
+.popup_box .popup_close { position:absolute; top:12px; right:12px; z-index:10; color:#333; text-decoration:none; font-size:18px; } /* styling popup_close class */
+
+.popup_loading { width:500px; height:500px; position:fixed; top:50%; left:50%; margin:-250px 0 0 -250px; z-index:2; } /* styling loading */
+.popup_loading > div { width:inherit; height:inherit; display:table-cell; vertical-align:middle; text-align:center; }
+
+.hover11 .item {
+	opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.hover11 .item:hover{
+	opacity: .5;
+}
+
+hr {
+    display: block;
+    width:60%;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin-bottom:80px;
+    padding: 0;
+}
+@viewport{    /*scalable has been translated into zoom */
+    zoom: 1.0;
+    width: extend-to-zoom;
+}
+
+/* for making website responsive below code is used, according to device size style is given to divisions and classes  so for specific device website size will be according to this */
+@media only screen 
+and (max-width : 960px) {        /* Here, Skeleton sets the rules for anything less than 960px
+       and at least the size of the Ipad screen. */
+   #mkmusthave {margin-top:-30px;}
+    #product {margin-top: -50px;}
+#mkmusthave h1 {    line-height: 55px; margin-bottom: -1px;}
+    #denimboxes .denim {padding: 20px 20px 1px;}
+#container { width:auto; padding:0 20px; }
+#footer > div { width:auto; padding:0 20px; }
+#home { width:100%; }
+#home iframe { height:480px; }
+#product { width:100%; }
+#product .item { float:none; width:auto; padding:40px 20px; }
+#product .item .image { display:block; width:auto; height:auto; }
+#denimboxes .denim { float:none; width:auto; padding:40px 20px; }
+#denimboxes .denim image { display:block; width:auto; height:auto; }
+#email_box { margin:0 -20px; }
+#email_box > div { width:100%; }
+#instagram_box { width:100%; }
+#store_box { width:100%; }
+#menu { width:100%; }
+#menu ul li { padding:0 40px; }
+}
+
+
+@media only screen 
+and (max-width : 860px) {        /* Here, Skeleton sets the rules for anything less than 960px
+       and at least the size of the Ipad screen. */
+   #mkmusthave {margin-top:-30px;}
+    #product {margin-top: -50px;}
+#mkmusthave h1 {    line-height: 55px; margin-bottom: -1px;}
+    #denimboxes .denim {padding: 20px 20px 5px;}
+}
+@media only screen 
+and (max-width : 640px) {
+    
+#mkmusthave {margin-top:-30px;}
+#product {margin-top: -50px;}
+#mkmusthave h1 {    line-height: 55px; margin-bottom: -1px;}
+    #denimboxes .denim {padding: 20px 20px 10px;}
+table { width:100%; }
+#footer { position:relative; }
+#menu ul li { padding:0 20px; }
+#home iframe { height:360px; }
+
+.address_div { width:100%; left:0; margin-left:0; }
+.popup_box { width:100%; left:0; margin-left:0; }
+}
+@media only screen 
+and (max-width : 480px) {   /* Landscape phones and down */
+    #mkmusthave {margin-top:-30px;}
+    #product {margin-top: -50px;}
+#mkmusthave h1 {    line-height: 55px; margin-bottom: -1px;}
+    #denimboxes .denim {padding: 20px 20px 10px;}
+table tr td { display:block; width:100%; padding-bottom:8px; text-align:center; }
+table tr td input { width:100%; }
+#menu ul li { display:block; padding:0; border:none; }
+#home iframe { height:240px; }
+#store_box .store { float:none; width:100%; margin:0 0 24px; }
+#store_box .store > div { padding:0; }
+#store_box .store_first > div { border:none; margin: 0 10px 8px; padding:25px 0 8px; }
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+/* Styles */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+/* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+/* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+          #mkmusthave {margin-top:-9px;}
+#mkmusthave h1 {    line-height: 55px; margin-bottom: -1px;}
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+    #store_box .store .address { margin-left: 100px}
+      #mkmusthave {margin-top:-8px;}
+#mkmusthave h1 {    line-height: 55px; margin-bottom: -1px;}
+/* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
+}
+
+.mn-social-bottom-c{padding-top: 20px;}
+.mn-social-bottom{margin:0 7.5px 15px;transition:all .3s;font-size:14px;display:inline-block;text-align:center;position:relative}
+.mn-social-bottom:hover{width:26px;height:20px;border-radius: 4px; box-sizing:border-box;background:#ff822d;color:#fff;opacity: 0.8;}
+.fa-plus {transition:-webkit-transform 0.1s}
+.fa-plus.mn-social-r {-webkit-transform:rotate(45deg)}
+.solial_img
+{
+	margin-top:20px;
+	margin-bottom:10px;
+}
