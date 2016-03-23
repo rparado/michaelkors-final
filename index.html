@@ -29,8 +29,7 @@
 <script src="script/cufon-yui.js"></script> <!--script used for cufon fonts-->
 <script src="script/Gotham_Book_325-Gotham_Rounded_Medium_350.font.js"></script> <!-- script used for font-family:Gotham Book, file name is Gotham_Book_325-Gotham_Rounded_Medium_350.font.js placed in folder "script"-->
 <script src="script/Caslon-Light_400.font.js"></script>  <!-- script used for font-family:Caslon-Light, file name is Caslon-Light_400.font.js placed in folder "script"-->
-<link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css" media="screen" />
-<script type="text/javascript" src="script/jquery.fancybox.pack.js"></script>
+<script src="script/bioep.js" type="text/javascript"></script>
 <script type="text/javascript">
 $(document).ready(function() <!--this is called an event its functionality is  to prevent any jQuery code from running before the document is finished loading (is ready).-->
  { <!--open delimeter of event $(document).ready(function()-->
@@ -101,6 +100,49 @@ Cufon.replace('#popup_box p',{fontFamily:'Gotham Book'});
 <!--[if lt IE 10]>
 <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
+<script type="text/javascript">
+      bioEp.init({
+        html: '<div class="fancybox" id="popup_box">'+
+	'<div class="fancybox-title">'+
+		'<h1 >SIGN UP FOR STYLE TIPS</h1>'+
+		'<p >SIGN UP AND GET A STYLE TIP FROM <br />MICHAEL KORS FOR THIS SEASON</p>'+
+	'</div>'+
+
+	'<div class="fancybox-body">'+
+			'<form id=form83 name=form83 class="wufoo topLabel page" accept-charset=UTF-8 autocomplete=off enctype="multipart/form-data" method=post novalidate action="https://europe360.wufoo.eu/forms/xiyrme80d0iz43/#public">'+
+			'<table class="oui-form-poup">'+
+				'<tr>'+
+					'<td>'+
+						'<input id=Field8 name=Field8 type="text" spellcheck=false class="field text large" placeholder=NAME value="" maxlength=255 tabindex=2 />'+
+					'</td>'+
+				'</tr>'+
+				'<tr>'+
+					'<td>'+
+						'<input id=Field1 name=Field1 type=email spellcheck=false class="field text large" placeholder="EMAIL ADDRESS" value="" maxlength=255 tabindex=2 />'+
+					'</td>'+
+				'</tr>'+
+				'<tr>'+
+					'<td class="td-input-submit">'+
+						'<input id=saveForm name=saveForm class="btImg submit" type=image src="images/submit-btn.png" alt=Submit />'+
+					'</td>'+
+				'</tr>'+
+			'</table>'+
+			'<div class=hide>'+
+				'<label for=comment>Do Not Fill This Out</label>'+
+				'<textarea name=comment id=comment rows=1 cols=1></textarea>'+
+				'<input type=hidden id=idstamp name=idstamp value="Tvq9YOO7RtV4uXx8uAmmr1cGNEqKZAUU/C/V+ST5Eig="/>'+
+			'</div>'+
+		'</form>'+
+		
+	'</div>'+
+'</div>',
+        css: '#popup_box h1 {font-family:"Adobe Caslon Pro";font-weight:400;text-align: center; color:#333;}'+
+        	'#popup_box p {font-family:"Adobe Caslon Pro"; text-align: center; color: #333;}',
+		cookieExp: 0
+      });
+
+</script>
+    <script>$(document).ready(function(){$("#form83").validate({rules:{Field8:{required:true},Field1:{required:true,email:true}},messages:{Field8:{required:"Please enter name."},Field1:{required:"Please enter email address.",email:"Please enter valid email address."}},submitHandler:function(form){$('.popup.loading').show();document.getElementById('saveForm').disabled=true;form.submit();}});});</script>
 <style type="text/css">
 .stButton .facebook
 {
@@ -333,38 +375,6 @@ a peek at the best of their favorite springtime blues. </p> <!--paragraph below 
 	
 	<a name="sign-up"></a> <!--scrolling to sign-up area-->
 
-
-	<div class="fancybox" id="popup_box">
-	<div class="fancybox-title">
-		<h1 style="font-family:'Adobe Caslon Pro'; font-style:italic;font-weight: 400;font-size:26px;line-height:50px; color:#000; margin-bottom:0px;">SIGN UP TO RECEIVE MICHAEL KORS NEWS</h1>
-	</div>
-
-	<div class="fancybox-body">
-			<form id=form83 name=form83 class="wufoo topLabel page" accept-charset=UTF-8 autocomplete=off enctype="multipart/form-data" method=post novalidate action="https://europe360.wufoo.eu/forms/k1000ju80c3vlbt/#public">
-			<table class="oui-form-poup">
-				<tr>
-					<td>
-						<input id=Field8 name=Field8 spellcheck=false class="field text large" placeholder=NAME value="" maxlength=255 tabindex=2 />
-					</td>
-					<td>
-						<input id=Field1 name=Field1 type=email spellcheck=false class="field text large" placeholder="EMAIL ADDRESS" value="" maxlength=255 tabindex=2 />
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<input id=saveForm name=saveForm class="btImg submit" type=image src="images/submit-btn.png" alt=Submit />
-					</td>
-				</tr>
-			</table>
-			<div class=hide>
-				<label for=comment>Do Not Fill This Out</label>
-				<textarea name=comment id=comment rows=1 cols=1></textarea>
-				<input type=hidden id=idstamp name=idstamp value="Tvq9YOO7RtV4uXx8uAmmr1cGNEqKZAUU/C/V+ST5Eig="/>
-			</div>
-		</form>
-		<script>$(document).ready(function(){$("#form83").validate({rules:{Field8:{required:true},Field1:{required:true,email:true}},messages:{Field8:{required:"Please enter name."},Field1:{required:"Please enter email address.",email:"Please enter valid email address."}},submitHandler:function(form){$('.popup.loading').show();document.getElementById('saveForm').disabled=true;form.submit();}});});</script>
-	</div>
-</div>
 
 
 
@@ -605,9 +615,9 @@ a peek at the best of their favorite springtime blues. </p> <!--paragraph below 
 
 <script type="text/javascript"> Cufon.now(); </script>
 <script type="text/javascript">
-	$('html').on('mouseleave', function() {
-		 $.fancybox.open('#popup_box');
-	});
+	$('html').on('touchend', function() {
+		$('#bio_ep, #bio_ep_bg').show();
+	})
 </script>
 </body> <!--close body of html-->
 </html> <!--close html-->

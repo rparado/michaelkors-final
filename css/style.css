@@ -155,12 +155,18 @@ box-shadow:0 3px 3px #666; }               /* set box shadow and color */
 #denimboxes .denim { float:left; width:309px; padding:20px 20px 40px; } /* styling item class of product division */
 
 
-#popup_box {
-    display: none;
-}
 #popup_box h1 {
     text-align: center;
     font-weight: 700;
+    font-style: normal;
+    font-size: 21px;
+    margin-bottom: 4px;
+    line-height: 36px;
+    m,margin-bottom: 20px;
+}
+#popup_box p {
+    font-size: 14px;
+    line-height: 17px;
 }
 .oui-form-poup {
     width: 100%;
@@ -172,7 +178,34 @@ table.oui-form-poup tr td {
 .oui-form-poup input[type="email"] {
     width: 100%;
 }
+.oui-form-poup tr td.td-input-submit {
+    text-align: center;
+    padding-top: 10px;
+}
+.fancybox-skin {
+    padding: 50px 50px 40px!important;
+}
+.fancybox-inner {
+    width: 100% !important;
+}
 
+#bio_ep {
+    width: 300px !important;
+    height: 300px!important;
+    padding: 15px!important;
+}
+#bio_ep_close {
+    top: 0;
+}
+#bio_ep_bg {
+    opacity: 0.8 !important;
+}
+
+@media screen and (min-width: 480px) {
+    #bio_ep {
+        margin-left: 0;
+    }
+}
 
 
 .hide { display:none; } /* styling class hide ( it is hidden at default ) */
@@ -217,10 +250,57 @@ hr {
     width: extend-to-zoom;
 }
 
+@media screen and(min-width: 960px) {
+    #popup_box h1 {
+    text-align: center;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 30px;
+}
+.oui-form-poup {
+    width: 100%;
+}
+table.oui-form-poup tr td {
+    text-align: left;
+}
+.oui-form-poup input[type="text"],
+.oui-form-poup input[type="email"] {
+    width: 100%;
+}
+.oui-form-poup tr td.td-input-submit {
+    text-align: center;
+    padding-top: 10px;
+}
+.fancybox-skin {
+    padding: 50px 50px 40px!important;
+}
+.fancybox-inner {
+    width: 100% !important;
+}
+#popup_box p {
+    font-size: 19px;
+    line-height: 28px;
+}
+#bio_ep {
+    width: 560px !important;
+    height: 400px !important;
+    padding: 50px 50px 30px!important;
+    margin-left: 0;
+}
+#bio_ep_close {
+    top: 0;
+}
+#bio_ep_bg {
+    opacity: 0.8 !important;
+}
+}
 /* for making website responsive below code is used, according to device size style is given to divisions and classes  so for specific device website size will be according to this */
 @media only screen 
 and (max-width : 960px) {        /* Here, Skeleton sets the rules for anything less than 960px
        and at least the size of the Ipad screen. */
+
    #mkmusthave {margin-top:-30px;}
     #product {margin-top: -50px;}
 #mkmusthave h1 {    line-height: 55px; margin-bottom: -1px;}
@@ -268,6 +348,7 @@ table { width:100%; }
 }
 @media only screen 
 and (max-width : 480px) {   /* Landscape phones and down */
+    
     #mkmusthave {margin-top:-30px;}
     #product {margin-top: -50px;}
 #mkmusthave h1 {    line-height: 55px; margin-bottom: -1px;}
@@ -324,6 +405,52 @@ and (orientation : portrait) {
 }
 
 /* Desktops and laptops ----------- */
+@media screen and (min-width: 960px){
+     #popup_box h1 {
+    text-align: center;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 30px;
+}
+.oui-form-poup {
+    width: 100%;
+}
+table.oui-form-poup tr td {
+    text-align: left;
+}
+.oui-form-poup input[type="text"],
+.oui-form-poup input[type="email"] {
+    width: 100%;
+}
+.oui-form-poup tr td.td-input-submit {
+    text-align: center;
+    padding-top: 10px;
+}
+.fancybox-skin {
+    padding: 50px 50px 40px!important;
+}
+.fancybox-inner {
+    width: 100% !important;
+}
+#popup_box p {
+    font-size: 19px;
+    line-height: 28px;
+}
+#bio_ep {
+    width: 560px !important;
+    height: 400px !important;
+    padding: 50px 50px 30px!important;
+    margin-left: 0;
+}
+#bio_ep_close {
+    top: 0;
+}
+#bio_ep_bg {
+    opacity: 0.8 !important;
+}
+}
 @media only screen 
 and (min-width : 1224px) {
           #mkmusthave {margin-top:-9px;}
