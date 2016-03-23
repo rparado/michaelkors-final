@@ -30,6 +30,7 @@
 <script src="script/Gotham_Book_325-Gotham_Rounded_Medium_350.font.js"></script> <!-- script used for font-family:Gotham Book, file name is Gotham_Book_325-Gotham_Rounded_Medium_350.font.js placed in folder "script"-->
 <script src="script/Caslon-Light_400.font.js"></script>  <!-- script used for font-family:Caslon-Light, file name is Caslon-Light_400.font.js placed in folder "script"-->
 <script src="script/bioep.js" type="text/javascript"></script>
+<script src="script/jquery.cookie.js" type="text/javascript"></script>
 <script type="text/javascript">
 $(document).ready(function() <!--this is called an event its functionality is  to prevent any jQuery code from running before the document is finished loading (is ready).-->
  { <!--open delimeter of event $(document).ready(function()-->
@@ -616,7 +617,10 @@ a peek at the best of their favorite springtime blues. </p> <!--paragraph below 
 <script type="text/javascript"> Cufon.now(); </script>
 <script type="text/javascript">
 	$('html').on('touchend', function() {
-		$('#bio_ep, #bio_ep_bg').show();
+		if ($.cookie('modal_shown') == null) {
+	        $.cookie('modal_shown', 'yes', { expires: 7, path: '/' });
+			$('#bio_ep, #bio_ep_bg').show();
+		}
 	})
 </script>
 </body> <!--close body of html-->
